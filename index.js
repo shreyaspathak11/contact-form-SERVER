@@ -15,7 +15,6 @@ app.get("/", (req, res) => {
   res.send("Hello, this is your Express.js server!");
 });
 
-
 app.post("/send-email", async (req, res) => {
   try {
     const { to, subject, text } = req.body;
@@ -34,9 +33,6 @@ app.post("/send-email", async (req, res) => {
       from: process.env.GMAIL_USER,
       to,
       subject,
-      firstName,
-      lastName,
-      phoneNumber,
       text,
     });
 
